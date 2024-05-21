@@ -1,0 +1,10 @@
+Light_meter.c:55:6:LM_Init	1
+Light_meter.c:62:6:OLED_Off	2
+Light_meter.c:75:9:T	3
+Light_meter.c:91:9:A	3
+Light_meter.c:106:6:Aim	5
+Light_meter.c:127:9:KeyScan	16
+Light_meter.c:174:6:KeyScan1	17
+Light_meter.c:222:6:KeyScan2	20
+Light_meter.c:266:6:frame	4
+Light_meter.c:283:6:Loop	10

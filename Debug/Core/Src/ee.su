@@ -1,0 +1,8 @@
+../Core/Src/ee.c:310:6:ee_write.part.0	32	static
+../Core/Src/ee.c:235:6:ee_format	40	static
+../Core/Src/ee.c:291:6:ee_read	12	static
+../Core/Src/ee.c:226:6:ee_init	8	static
+../Core/Src/ee.c:310:6:ee_write	16	static
+../Core/Src/ee.c:388:6:ee_writeToRam	16	static
+../Core/Src/ee.c:402:7:ee_commit	8	static
+../Core/Src/ee.c:413:11:ee_maxVirtualAddress	0	static

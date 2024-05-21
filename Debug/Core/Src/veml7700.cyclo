@@ -1,0 +1,5 @@
+veml7700.c:12:6:veml7700_write	1
+veml7700.c:17:6:veml7700_read	1
+veml7700.c:40:13:veml7700_set_light_sensor_value	1
+veml7700.c:160:8:get_lux_data	1
+veml7700.c:165:6:veml7700_init	1

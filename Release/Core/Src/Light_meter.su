@@ -1,0 +1,10 @@
+../Core/Src/Light_meter.c:55:6:LM_Init	8	static
+../Core/Src/Light_meter.c:62:6:OLED_Off	16	static
+../Core/Src/Light_meter.c:75:9:T	32	static
+../Core/Src/Light_meter.c:91:9:A	32	static
+../Core/Src/Light_meter.c:106:6:Aim	24	static
+../Core/Src/Light_meter.c:127:9:KeyScan	24	static
+../Core/Src/Light_meter.c:174:6:KeyScan1	16	static
+../Core/Src/Light_meter.c:222:6:KeyScan2	16	static
+../Core/Src/Light_meter.c:266:6:frame	24	static
+../Core/Src/Light_meter.c:283:6:Loop	64	static

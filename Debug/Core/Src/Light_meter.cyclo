@@ -1,0 +1,12 @@
+Light_meter.c:45:6:EEPROM_Read	6
+Light_meter.c:75:6:EEPROM_Write	1
+Light_meter.c:87:6:LM_Init	1
+Light_meter.c:94:6:OLED_Off	2
+Light_meter.c:107:9:T	3
+Light_meter.c:121:9:A	3
+Light_meter.c:134:6:Aim	5
+Light_meter.c:153:9:KeyScan	16
+Light_meter.c:198:6:KeyScan1	17
+Light_meter.c:244:6:KeyScan2	20
+Light_meter.c:286:6:frame	4
+Light_meter.c:301:6:Loop	10

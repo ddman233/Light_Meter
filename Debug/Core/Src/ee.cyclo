@@ -1,0 +1,8 @@
+ee.c:310:6:ee_write.part.0	3
+ee.c:235:6:ee_format	4
+ee.c:291:6:ee_read	5
+ee.c:226:6:ee_init	1
+ee.c:310:6:ee_write	3
+ee.c:388:6:ee_writeToRam	3
+ee.c:402:7:ee_commit	2
+ee.c:413:11:ee_maxVirtualAddress	1

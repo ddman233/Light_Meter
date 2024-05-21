@@ -1,0 +1,5 @@
+../Core/Src/veml7700.c:12:6:veml7700_write	24	static
+../Core/Src/veml7700.c:17:6:veml7700_read	24	static
+../Core/Src/veml7700.c:40:13:veml7700_set_light_sensor_value	40	static
+../Core/Src/veml7700.c:160:8:get_lux_data	16	static
+../Core/Src/veml7700.c:165:6:veml7700_init	16	static
