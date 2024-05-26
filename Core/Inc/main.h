@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define WP_Pin GPIO_PIN_1
+#define WP_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

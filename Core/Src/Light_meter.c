@@ -9,6 +9,7 @@
 #include "veml7700.h"
 #include <Math.h>
 #include <stdio.h>
+#include <stdlib.h>
 //光圈，快门速度
 const uint16_t isos[] = {6,12,25,50,64,100,125,160,200,250,320,400,500,800,1600,3200,6400};
 const float shutters[] = {0.00025,0.0005,0.001, 0.002, 0.004, 0.008, 0.0167, 0.0333, 0.0667, 0.125, 0.25, 0.5, 1, 2};
@@ -45,14 +46,14 @@ uint8_t y = 0;
 uint8_t toy = 0;
 
 int Select = 0;
-uint8_t SelectValue[4] ={255,5,6,60};
+uint8_t SelectValue[4] ={255,5,6,30};
 u8g2_t u8g2;
+extern ADC_HandleTypeDef hadc1;
 
 void LM_Init(){
 	u8g2_Init(&u8g2);
 	veml7700_init();
 }
-
 
 //进入睡眠模式
 void OLED_Off(){
@@ -312,7 +313,9 @@ void Loop(){
 		sprintf(buf,"%.3f",EV);
 		u8g2_DrawStr(&u8g2,80,20,"EV");
 		u8g2_DrawStr(&u8g2,92,20,buf);
-		sprintf(buf,"%.3f",Lux);
+//		sprintf(buf,"%.3f",Lux);
+		HAL_ADC_Start(&hadc1);
+		itoa(HAL_ADC_GetValue(&hadc1),buf,10);
 		u8g2_DrawStr(&u8g2,1,53,buf);
 	}
 
@@ -341,7 +344,9 @@ void Loop(){
 		sprintf(buf,"%.3f",EV);
 		u8g2_DrawStr(&u8g2,80,20,"EV");
 		u8g2_DrawStr(&u8g2,92,20,buf);
-		sprintf(buf,"%.3f",Lux);
+//		sprintf(buf,"%.3f",Lux);
+		HAL_ADC_Start(&hadc1);
+		itoa(HAL_ADC_GetValue(&hadc1),buf,10);
 		u8g2_DrawStr(&u8g2,1,53,buf);
 	  }
 		u8g2_SendBuffer(&u8g2);
@@ -358,15 +363,15 @@ void Loop(){
 		char buf[32];
 		u8g2_SetFont(&u8g2,u8g2_font_spleen6x12_mf);
 		sprintf(buf,"%d",isos[SelectValue[1]]);
-		u8g2_DrawStr(&u8g2,0,14,"ISO");
+		u8g2_DrawStr(&u8g2,0,14,".ISO");
 		u8g2_DrawStr(&u8g2,100,14,buf);
-		u8g2_DrawStr(&u8g2,0,29,"E V");
+		u8g2_DrawStr(&u8g2,0,29,".EV Compensate");
 		u8g2_DrawStr(&u8g2,100,29,Ev_[SelectValue[2]]);
 		sprintf(buf,"%d",SelectValue[3]);
-		u8g2_DrawStr(&u8g2,0,45,"Sleep");
+		u8g2_DrawStr(&u8g2,0,45,".Sleep Time");
 		u8g2_DrawStr(&u8g2,100,45,buf);
 		frame();
 		u8g2_SendBuffer(&u8g2);
 		return;
-		}
+	}
 }
